@@ -1,0 +1,15 @@
+.details-banner{
+    background-image: url("../../../images/herimg.png"),
+    linear-gradient(rgba(49, 51, 53, 0.575), rgba(29, 31, 32, 0.575));
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 440px;
+    width: 100%;
+    background-blend-mode: overlay;
+}
+
+.banner-text{
+    margin-top: 300px;
+}

@@ -32,7 +32,7 @@ const Header = () => {
                         </Nav>
                         <Nav>
 
-                            <Nav.Link >Create Account. Its Free</Nav.Link>
+                            <Nav.Link className="fw-bold text-dark fs-6">Create Account. <span className="free-text">It's free!</span> </Nav.Link>
 
                         </Nav>
                     </Navbar.Collapse>
