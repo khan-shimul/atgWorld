@@ -1,0 +1,13 @@
+.nav-menu{
+    background-color: #fff !important;
+    padding: 20px 0;
+}
+
+.search-field input{
+    background-color: #F2F2F2 !important;
+    border: none;
+    border-radius: 21px;
+    padding: 16px;
+    width: 360px;
+    height: 42px;
+}
