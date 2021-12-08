@@ -59,9 +59,9 @@ export const CreateAccount = (props) => {
                             </form>
 
                             <div className="others-login">
-                                <button className="btn-social-login my-2"><span><img src={fb} className="img-fluid me-2" alt="" /></span> Sign Up with Facebook</button>
+                                <button className="btn-social-login my-2"><span><img src={fb} className="img-fluid me-2" alt="" /></span> {!isLogin ? 'Sign Up with Facebook' : 'Sign In with Facebook'} </button>
                                 <br />
-                                <button className="btn-social-login"><span><img className="img-fluid me-2" src={google} alt="" /></span> Sign Up with Google</button>
+                                <button className="btn-social-login"><span><img className="img-fluid me-2" src={google} alt="" /></span> {!isLogin ? 'Sign Up with Google' : 'Sign In with Google'}</button>
                                 {
                                     isLogin && <p className="text-center fw-bold mt-3">Forgot Password?</p>
                                 }
