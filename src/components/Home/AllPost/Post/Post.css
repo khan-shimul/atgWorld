@@ -1,3 +1,13 @@
+.btn-dot{
+    background: #BFC0C0;
+}
+
+.dot{
+    display: inline-block;
+    margin-top: -20px;
+    font-size: 30px;
+}
+
 .btn-regular{
     background-color: transparent;
     width: 100%;

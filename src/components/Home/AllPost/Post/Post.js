@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Post.css';
+import share from '../../../../images/icons/share.png';
+import eye from '../../../../images/icons/eyes.png';
 
 const Post = ({ post }) => {
     const { title, type, sub, img, author, authImg, views, date, location, office } = post;
@@ -20,8 +22,8 @@ const Post = ({ post }) => {
                         <div className="dropdown">
                             <button
                                 onClick={() => setClicked(true)}
-                                className={isClicked ? 'h-75 btn btn-secondary fs-4 pb-1' : 'btn bg-white fs-4'} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                ...
+                                className={isClicked ? 'h-75 btn btn-dot' : 'btn bg-white fs-4'} type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span className="dot">...</span>
                             </button>
                             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a className="dropdown-item" href="#">Edit</a>
@@ -57,10 +59,9 @@ const Post = ({ post }) => {
                         </div>
                         <div className="d-flex align-items-center">
                             <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block">
-                                <h6 className="me-2">{views} views</h6>
+                                <h6 className="me-2"><img src={eye} alt="" /> {views} views</h6>
                             </div>
-
-                            <button className="btn btn-secondary">share</button>
+                            <img style={{ cursor: 'pointer', marginTop: '-10px' }} src={share} alt="" />
                         </div>
                     </div>
 
