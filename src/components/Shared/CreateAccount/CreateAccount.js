@@ -47,12 +47,12 @@ export const CreateAccount = (props) => {
                                     <p className="text-end d-block d-sm-block d-md-none d-lg-none d-xl-none">
                                         {
                                             isLogin === false &&
-                                            <span><span className="fw-bold text-secondary opacity-75" onClick={() => setLogin(true)}>or, Sign In</span></span>
+                                            <span style={{ cursor: 'pointer' }}><span className="fw-bold text-secondary opacity-75" onClick={() => setLogin(true)}>or, Sign In</span></span>
 
                                         }
                                     </p>
                                     {
-                                        isLogin && <p className="text-end d-block d-sm-block d-md-none d-lg-none d-xl-none"><span className="fw-bold text-secondary opacity-75" onClick={() => setLogin(false)}>or, Create Account</span></p>
+                                        isLogin && <p style={{ cursor: 'pointer' }} className="text-end d-block d-sm-block d-md-none d-lg-none d-xl-none"><span className="fw-bold text-secondary opacity-75" onClick={() => setLogin(false)}>or, Create Account</span></p>
                                     }
                                 </div>
 
