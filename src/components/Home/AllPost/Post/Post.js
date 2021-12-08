@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './Post.css';
 import share from '../../../../images/icons/share.png';
 import eye from '../../../../images/icons/eyes.png';
+import dateIcon from '../../../../images/icons/date.png';
+import workIcon from '../../../../images/icons/work.png';
+import placeHolder from '../../../../images/icons/placeHolder.png';
+import { Placeholder } from 'react-bootstrap';
 
 const Post = ({ post }) => {
     const { title, type, sub, img, author, authImg, views, date, location, office } = post;
@@ -35,8 +39,8 @@ const Post = ({ post }) => {
                     {
                         date && <div>
                             <div className="d-flex">
-                                <p className="me-5">{date}</p>
-                                <p>{location}</p>
+                                <p className="me-5"><img src={dateIcon} alt="" /> {date}</p>
+                                <p><img src={placeHolder} alt="" /> {location}</p>
                             </div>
                             <button className="btn-regular visit-site1">Visit Website</button>
                         </div>
@@ -44,8 +48,8 @@ const Post = ({ post }) => {
                     {
                         type === '💼️ Job' && <div>
                             <div className="d-flex">
-                                <p className="me-5">{office}</p>
-                                <p>{location}</p>
+                                <p className="me-5"><img src={workIcon} alt="" /> {office}</p>
+                                <p><img src={placeHolder} alt="" /> {location}</p>
                             </div>
                             <button className="btn-regular visit-site2">Apply on Timesjobs</button>
                         </div>
