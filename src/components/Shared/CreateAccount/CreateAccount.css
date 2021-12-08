@@ -48,3 +48,17 @@
     border: none;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 768px) {
+    .sign-up-footer-text{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .forms{
+        width: 99%;
+    }
+    .submit-btn{
+        width: 50%;
+    }
+    
+}

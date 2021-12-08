@@ -52,8 +52,10 @@ const AllPost = () => {
                             </button>
                             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a className="dropdown-item" href="#">Post</a>
-                                <a className="dropdown-item" href="#">Job</a>
+                                <a className="dropdown-item" href="#">Article</a>
                                 <a className="dropdown-item" href="#">Event</a>
+                                <a className="dropdown-item" href="#">Education</a>
+                                <a className="dropdown-item" href="#">Job</a>
                             </div>
                         </div>
                     </div>

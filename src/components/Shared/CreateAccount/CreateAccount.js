@@ -5,7 +5,7 @@ import loginImg from '../../../images/login.png';
 import google from '../../../images/icons/google.png';
 import fb from '../../../images/icons/fb.png';
 import { useState } from "react";
-import Login from "./Login";
+import eye from '../../../images/icons/eyes.png';
 
 export const CreateAccount = (props) => {
     const [isLogin, setLogin] = useState(false);
@@ -41,7 +41,21 @@ export const CreateAccount = (props) => {
                                         !isLogin && <input placeholder="Confirm Password" className="border p-2" type="password" {...register("password2", { required: true })} />
                                     }
                                 </div>
-                                <input className="submit-btn" type="submit" value={isLogin ? 'Sign In' : 'Create Account'} />
+                                <div className="d-flex align-items-center justify-content-between">
+                                    <input className="submit-btn me-2" type="submit" value={isLogin ? 'Sign In' : 'Create Account'} />
+                                    {/* For Mobile Devices */}
+                                    <p className="text-end d-block d-sm-block d-md-none d-lg-none d-xl-none">
+                                        {
+                                            isLogin === false &&
+                                            <span><span className="fw-bold text-secondary opacity-75" onClick={() => setLogin(true)}>or, Sign In</span></span>
+
+                                        }
+                                    </p>
+                                    {
+                                        isLogin && <p className="text-end d-block d-sm-block d-md-none d-lg-none d-xl-none"><span className="fw-bold text-secondary opacity-75" onClick={() => setLogin(false)}>or, Create Account</span></p>
+                                    }
+                                </div>
+
                             </form>
 
                             <div className="others-login">
@@ -54,7 +68,7 @@ export const CreateAccount = (props) => {
                             </div>
                         </div>
                         <div className="col-md-5">
-                            <p className="text-end">
+                            <p className="text-end d-none d-md-block d-lg-block d-xl-block">
                                 {
                                     isLogin === false &&
                                     <span>Already have an account? <span className="sign-in-text" onClick={() => setLogin(true)}> Sign In</span></span>
@@ -62,11 +76,13 @@ export const CreateAccount = (props) => {
                                 }
                             </p>
                             {
-                                isLogin && <p className="text-end">Don’t have account? <span className="sign-in-text" onClick={() => setLogin(false)}>Create new for free!</span></p>
+                                isLogin && <p className="text-end d-none d-md-block d-lg-block d-xl-block">Don’t have account? <span className="sign-in-text" onClick={() => setLogin(false)}>Create new for free!</span></p>
                             }
 
-                            <img className="img-fluid p-3" src={loginImg} alt="" />
-                            <p className="sign-up-footer-text">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                            <img className="img-fluid p-3 d-none d-md-block d-lg-block d-xl-block" src={loginImg} alt="" />
+                            {
+                                !isLogin && <p className="sign-up-footer-text">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                            }
                         </div>
                     </div>
                 </div>
