@@ -23,7 +23,6 @@ const Header = () => {
                         />{' '}
 
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
                             <Form className="search-field">
