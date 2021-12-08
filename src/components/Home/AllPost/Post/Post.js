@@ -40,12 +40,12 @@ const Post = ({ post }) => {
                         </div>
                     }
                     {
-                        type === 'Job' && <div>
+                        type === '💼️ Job' && <div>
                             <div className="d-flex">
                                 <p className="me-5">{office}</p>
                                 <p>{location}</p>
                             </div>
-                            <button className="btn-regular visit-site2">Visit Website</button>
+                            <button className="btn-regular visit-site2">Apply on Timesjobs</button>
                         </div>
                     }
 
