@@ -7,10 +7,7 @@
 .forms{
     width: 91%;
 }
-.names-field{
-    /* background: #F7F8FA; */
 
-}
 .forms input{
     background: #F7F8FA;
     border: 1px solid #D9D9DB;
@@ -35,4 +32,18 @@
     border: 0.6px solid #D9D9DB;
     border-radius: 2px;
     padding: 11px 0;
+}
+
+.sign-up-footer-text{
+    font-family: inherit;
+    font-size: 13px;
+    color: #2c2c2c;
+    margin-top: 80px;
+}
+
+.sign-in-text{
+    color: #4C6FF5;
+    cursor: pointer;
+    background: transparent;
+    border: none;
 }
