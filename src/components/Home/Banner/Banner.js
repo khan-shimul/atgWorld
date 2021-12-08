@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './Banner.css';
-import arrow from '../../../images/icons/arrow.png';
 
 const Banner = () => {
     return (

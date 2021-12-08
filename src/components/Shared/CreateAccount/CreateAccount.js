@@ -5,7 +5,6 @@ import loginImg from '../../../images/login.png';
 import google from '../../../images/icons/google.png';
 import fb from '../../../images/icons/fb.png';
 import { useState } from "react";
-import eye from '../../../images/icons/eyes.png';
 
 export const CreateAccount = (props) => {
     const [isLogin, setLogin] = useState(false);
