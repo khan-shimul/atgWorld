@@ -2,6 +2,8 @@ import React from 'react';
 import { posts } from '../AllPost/AllPost';
 import Post from '../Post/Post';
 import './Post.css';
+import alertIcon from '../../../../images/icons/alert.png';
+import placeHolder from '../../../../images/icons/placeHolder.png';
 
 const Posts = () => {
     return (
@@ -20,7 +22,7 @@ const Posts = () => {
                 <div className="col-md-4">
                     <div className="select-location-container">
                         <div className="input-group mb-3 fs-6">
-                            <select className="location-in form-select" id="inputGroupSelect01">
+                            <select className="border-top-0 border-start-0 border-end-0 border-bottom-1 location-in form-select" id="inputGroupSelect01">
                                 <option selected>Noida, India</option>
                                 <option value="1">Mumbai, India</option>
                                 <option value="2">Delhi, India</option>
@@ -28,7 +30,7 @@ const Posts = () => {
                             </select>
                         </div>
                         <div>
-                            <p className="text-secondary">Your location will help us serve better and extend a personalised experience.</p>
+                            <p className="text-secondary"> <span><img src={alertIcon} alt="" /></span> Your location will help us serve better and extend a personalised experience.</p>
                         </div>
                     </div>
                 </div>
