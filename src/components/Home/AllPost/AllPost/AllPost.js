@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Form, FormControl, Nav, Navbar, Row } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import './AllPost.css';
 import img1 from '../../../../images/post/1.png'
 import img2 from '../../../../images/post/2.png'
@@ -8,7 +8,6 @@ import authImg1 from '../../../../images/author/auth1.png';
 import authImg2 from '../../../../images/author/auth2.png';
 import authImg3 from '../../../../images/author/auth3.png';
 import authImg4 from '../../../../images/author/4.png';
-import Post from '../Post/Post';
 
 export const posts = [
     { id: 1, type: 'Article', title: 'What if famous brands had regular fonts? Meet RegulaBrands!', sub: 'I’ve worked in UX for the better part of a decade. From now on, I plan to rei…', img: img1, author: 'Sarthak Kamra', authImg: authImg1, views: '1.4k' },
@@ -19,7 +18,7 @@ export const posts = [
 
 const AllPost = () => {
     return (
-        <section className="sticky-top bg-white">
+        <section className="sticky-md-top bg-white">
             <div className="all-post-container row">
                 <div className="col-md-8 d-flex">
                     <h5 className="ms-2">Post</h5>
@@ -44,10 +43,19 @@ const AllPost = () => {
                 <hr className="brder mx-auto" />
             </div>
             <div className="container">
-                <div className="header-mobile d-sm-block d-md-none mt-3">
+                <div className="header-mobile d-sm-block d-md-none d-lg-none d-xl-none my-4">
                     <div className="d-flex justify-content-between">
-                        <h4>Posts</h4>
-                        <button className="btn btn-secondary">Filter</button>
+                        <h4 className="text-dark fw-bold">Posts({posts.length})</h4>
+                        <div className="dropdown">
+                            <button className="btn btn-filter dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Filter:All
+                            </button>
+                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a className="dropdown-item" href="#">Post</a>
+                                <a className="dropdown-item" href="#">Job</a>
+                                <a className="dropdown-item" href="#">Event</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

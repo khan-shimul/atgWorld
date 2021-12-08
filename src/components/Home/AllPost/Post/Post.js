@@ -56,7 +56,10 @@ const Post = ({ post }) => {
                             <h5>{author}</h5>
                         </div>
                         <div className="d-flex align-items-center">
-                            <h6 className="me-2">{views} views</h6>
+                            <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block">
+                                <h6 className="me-2">{views} views</h6>
+                            </div>
+
                             <button className="btn btn-secondary">share</button>
                         </div>
                     </div>

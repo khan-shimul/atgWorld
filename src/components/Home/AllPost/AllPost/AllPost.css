@@ -13,6 +13,11 @@
     display: none;
 } */
 
+.btn-filter{
+    background:  #F1F3F5;
+    font-weight: 600;
+}
+
 /* responsiveness */
 @media only screen and (max-width: 768px) {
     .all-post-container{
