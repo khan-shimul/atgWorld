@@ -8,6 +8,7 @@ import authImg2 from '../../../../images/author/auth2.png';
 import authImg3 from '../../../../images/author/auth3.png';
 import authImg4 from '../../../../images/author/4.png';
 import joinGroup from '../../../../images/icons/join.png';
+import pencil from '../../../../images/icons/whitepen.png';
 
 export const posts = [
     { id: 1, type: '✍️ Article', title: 'What if famous brands had regular fonts? Meet RegulaBrands!', sub: 'I’ve worked in UX for the better part of a decade. From now on, I plan to rei…', img: img1, author: 'Sarthak Kamra', authImg: authImg1, views: '1.4k' },
@@ -57,6 +58,19 @@ const AllPost = () => {
                                 <a className="dropdown-item" href="#">Education</a>
                                 <a className="dropdown-item" href="#">Job</a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="edit-container text-end fixed-bottom d-sm-block d-md-none d-lg-none d-xl-none m-5">
+                    <div className="dropdown">
+                        <button className="btn btn-locate" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src={pencil} alt="" />
+                        </button>
+                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a className="dropdown-item" href="#">Noida, India</a>
+                            <a className="dropdown-item" href="#">Mumbai, India</a>
+                            <a className="dropdown-item" href="#">Delhi, India</a>
+                            <a className="dropdown-item" href="#">Punjab, India</a>
                         </div>
                     </div>
                 </div>

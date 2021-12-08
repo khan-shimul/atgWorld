@@ -18,6 +18,13 @@
     font-weight: 600;
 }
 
+.btn-locate{
+    background-image: linear-gradient(#FF5C5C, #F0568A);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+}
+
 /* responsiveness */
 @media only screen and (max-width: 768px) {
     .all-post-container{

@@ -19,7 +19,7 @@ const Posts = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <div className="select-location-container">
+                    <div className="select-location-container d-none d-sm-none d-md-block d-lg-block d-xl-block">
                         <div className="input-group mb-3 fs-6">
                             <select className="border-top-0 border-start-0 border-end-0 border-bottom-1 location-in form-select" id="inputGroupSelect01">
                                 <option selected>Noida, India</option>
