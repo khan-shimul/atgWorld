@@ -10,12 +10,6 @@ import authImg4 from '../../../../images/author/4.png';
 import joinGroup from '../../../../images/icons/join.png';
 import pencil from '../../../../images/icons/whitepen.png';
 import { NavLink } from 'react-router-dom';
-import {
-    BrowserRouter,
-    Routes,
-    Route
-} from 'react-router-dom';
-import Articles from '../../Articles/Articles';
 
 export const posts = [
     { id: 1, type: '✍️ Article', title: 'What if famous brands had regular fonts? Meet RegulaBrands!', sub: 'I’ve worked in UX for the better part of a decade. From now on, I plan to rei…', img: img1, author: 'Sarthak Kamra', authImg: authImg1, views: '1.4k' },
@@ -41,9 +35,6 @@ const AllPost = () => {
                     <NavLink to="/home/education" className="ms-2">Education</NavLink>
                     <NavLink to="/home/job" className="ms-2">Job</NavLink>
                 </div>
-                <Routes>
-                    <Route path="/article" element={<Articles />} />
-                </Routes>
                 <div className="col-md-4 d-flex">
                     <div className="dropdown">
                         <button className="btn btn-filter btn- dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
