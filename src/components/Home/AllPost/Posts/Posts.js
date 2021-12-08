@@ -5,8 +5,8 @@ import Post from '../Post/Post';
 
 const Posts = () => {
     return (
-        <div className="all-post-container">
-            <div className="row">
+        <div className="posts-container">
+            <div className="container mx-auto row">
                 <div className="col-md-8 col-12">
                     <div className="row row-cols-1 row-cols-md-1 g-4">
                         {
