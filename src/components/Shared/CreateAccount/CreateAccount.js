@@ -33,8 +33,13 @@ export const CreateAccount = (props) => {
                                     <input className="p-2" placeholder="Password" type="password" {...register("password", { required: true })} />
                                     <input placeholder="Confirm Password" className="border p-2" type="password" {...register("password2", { required: true })} />
                                 </div>
-                                <input type="submit" />
+                                <input className="submit-btn" type="submit" />
                             </form>
+                            <div className="others-login">
+                                <button className="btn-social-login my-2">Sign Up with Facebook</button>
+                                <br />
+                                <button className="btn-social-login">Sign Up with Google</button>
+                            </div>
                         </div>
                         <div className="col-md-5">
                             <img className="img-fluid" src={loginImg} alt="" />
