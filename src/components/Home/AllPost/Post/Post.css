@@ -1,0 +1,16 @@
+.btn-regular{
+    background-color: transparent;
+    width: 100%;
+    border: 1px solid #A9AEB8;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.visit-site1{
+    color: #E56135;
+}
+.visit-site2{
+    color: #02B875;
+}

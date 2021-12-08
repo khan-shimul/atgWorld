@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Card, Col } from 'react-bootstrap';
+import './Post.css';
 
 const Post = ({ post }) => {
-    const { title, type, sub, img, author, authImg, views } = post;
+    const { title, type, sub, img, author, authImg, views, date, location, office } = post;
     const [isClicked, setClicked] = useState(false);
     if (isClicked) {
 
@@ -10,7 +10,9 @@ const Post = ({ post }) => {
     return (
         <div className="col">
             <div className="card">
-                <img src={img} className="card-img-top" alt="..." />
+                {
+                    img && <img src={img} className="card-img-top" alt="..." />
+                }
                 <div className="card-body">
                     <h6>{type}</h6>
                     <div className="d-flex justify-content-between align-items-center">
@@ -28,6 +30,25 @@ const Post = ({ post }) => {
                             </div>
                         </div>
                     </div>
+                    {
+                        date && <div>
+                            <div className="d-flex">
+                                <p className="me-5">{date}</p>
+                                <p>{location}</p>
+                            </div>
+                            <button className="btn-regular visit-site1">Visit Website</button>
+                        </div>
+                    }
+                    {
+                        type === 'Job' && <div>
+                            <div className="d-flex">
+                                <p className="me-5">{office}</p>
+                                <p>{location}</p>
+                            </div>
+                            <button className="btn-regular visit-site2">Visit Website</button>
+                        </div>
+                    }
+
                     <p className="card-text">{sub}</p>
                     <div className="auth-container d-flex justify-content-between">
                         <div className="d-flex align-items-center">
