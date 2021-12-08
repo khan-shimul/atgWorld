@@ -3,15 +3,18 @@
     padding-bottom: 0px;
     margin: 25px 200px;
 }
+.nested-routes a{
+    text-decoration: none;
+    color: #8A8A8A;
+    font-size: 16px;
+}
+
 .brder{
     width: 90%;
     margin-top: 10px;
     display: block;
     margin-left: 500px;
 }
-/* .header-mobile{
-    display: none;
-} */
 
 .btn-filter{
     background:  #F1F3F5;

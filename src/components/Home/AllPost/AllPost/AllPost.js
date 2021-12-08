@@ -9,6 +9,13 @@ import authImg3 from '../../../../images/author/auth3.png';
 import authImg4 from '../../../../images/author/4.png';
 import joinGroup from '../../../../images/icons/join.png';
 import pencil from '../../../../images/icons/whitepen.png';
+import { NavLink } from 'react-router-dom';
+import {
+    BrowserRouter,
+    Routes,
+    Route
+} from 'react-router-dom';
+import Articles from '../../Articles/Articles';
 
 export const posts = [
     { id: 1, type: '✍️ Article', title: 'What if famous brands had regular fonts? Meet RegulaBrands!', sub: 'I’ve worked in UX for the better part of a decade. From now on, I plan to rei…', img: img1, author: 'Sarthak Kamra', authImg: authImg1, views: '1.4k' },
@@ -21,13 +28,22 @@ const AllPost = () => {
     return (
         <section className="sticky-md-top bg-white">
             <div className="all-post-container row">
-                <div className="col-md-8 d-flex">
-                    <h5 className="ms-2">Post</h5>
-                    <h5 className="ms-2">Article</h5>
-                    <h5 className="ms-2">Event</h5>
-                    <h5 className="ms-2">Education</h5>
-                    <h5 className="ms-2">Job</h5>
+                <div className="nested-routes col-md-8 d-flex">
+                    <NavLink style={({ isActive }) => {
+                        return {
+                            display: "block",
+                            color: isActive ? "black" : "",
+                            fontWeight: isActive ? "600" : ''
+                        };
+                    }} to="/" className="ms-2">All Post({posts.length})</NavLink>
+                    <NavLink to="/home/article" className="ms-2">Article</NavLink>
+                    <NavLink to="/home/event" className="ms-2">Event</NavLink>
+                    <NavLink to="/home/education" className="ms-2">Education</NavLink>
+                    <NavLink to="/home/job" className="ms-2">Job</NavLink>
                 </div>
+                <Routes>
+                    <Route path="/article" element={<Articles />} />
+                </Routes>
                 <div className="col-md-4 d-flex">
                     <div className="dropdown">
                         <button className="btn btn-filter btn- dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -75,6 +91,7 @@ const AllPost = () => {
                     </div>
                 </div>
             </div>
+
         </section>
     );
 };
