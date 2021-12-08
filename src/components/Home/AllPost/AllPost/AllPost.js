@@ -19,7 +19,7 @@ export const posts = [
 
 const AllPost = () => {
     return (
-        <section className="">
+        <section className="sticky-top bg-white">
             <div className="all-post-container row">
                 <div className="col-md-8 d-flex">
                     <h5 className="ms-2">Post</h5>

@@ -1,10 +1,12 @@
-import React from 'react';
-import { Button, Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import logo from '../../../images/logo.png';
+import { CreateAccount } from '../CreateAccount/CreateAccount';
 import './Header.css';
 
 const Header = () => {
+    const [modalShow, setModalShow] = React.useState(false);
     return (
         <header>
             <Navbar className="nav-menu" sticky="top" collapseOnSelect expand="lg">
@@ -31,9 +33,13 @@ const Header = () => {
                             </Form>
                         </Nav>
                         <Nav>
-
-                            <Nav.Link className="fw-bold text-dark fs-6">Create Account. <span className="free-text">It's free!</span> </Nav.Link>
-
+                            <button className="fw-bold text-dark fs-6 btn bg-white" onClick={() => setModalShow(true)}>
+                                Create Account. <span className="free-text  dropdown-toggle">It's free!</span>
+                            </button>
+                            <CreateAccount
+                                show={modalShow}
+                                onHide={() => setModalShow(false)}
+                            />
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

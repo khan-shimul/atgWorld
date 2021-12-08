@@ -1,7 +1,7 @@
 import React from 'react';
-import { Row } from 'react-bootstrap';
 import { posts } from '../AllPost/AllPost';
 import Post from '../Post/Post';
+import './Post.css';
 
 const Posts = () => {
     return (
@@ -18,7 +18,19 @@ const Posts = () => {
                     </div>
                 </div>
                 <div className="col-md-4">
-                    <h2>ksdfksadjfk</h2>
+                    <div className="select-location-container">
+                        <div className="input-group mb-3 fs-6">
+                            <select className="location-in form-select" id="inputGroupSelect01">
+                                <option selected>Noida, India</option>
+                                <option value="1">Mumbai, India</option>
+                                <option value="2">Delhi, India</option>
+                                <option value="3">Punjab, India</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p className="text-secondary">Your location will help us serve better and extend a personalised experience.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
