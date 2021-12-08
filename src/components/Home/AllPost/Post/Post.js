@@ -13,7 +13,7 @@ const Post = ({ post }) => {
 
     }
     return (
-        <div className="col">
+        <div className="col single-card">
             <div className="card">
                 {
                     img && <img src={img} className="card-img-top" alt="..." />
@@ -21,7 +21,7 @@ const Post = ({ post }) => {
                 <div className="card-body">
                     <h6>{type}</h6>
                     <div className="d-flex justify-content-between align-items-center">
-                        <h5 className="card-title">{title}</h5>
+                        <h5 className="card-title fw-bold">{title}</h5>
                         <div className="dropdown">
                             <button
                                 onClick={() => setClicked(true)}
@@ -38,8 +38,8 @@ const Post = ({ post }) => {
                     {
                         date && <div>
                             <div className="d-flex">
-                                <p className="me-5"><img src={dateIcon} alt="" /> {date}</p>
-                                <p><img src={placeHolder} alt="" /> {location}</p>
+                                <p className="me-5 other-info medium-text"><img src={dateIcon} alt="" /> {date}</p>
+                                <p className="medium-text"><img src={placeHolder} alt="" /> {location}</p>
                             </div>
                             <button className="btn-regular visit-site1">Visit Website</button>
                         </div>
@@ -47,22 +47,25 @@ const Post = ({ post }) => {
                     {
                         type === '💼️ Job' && <div>
                             <div className="d-flex">
-                                <p className="me-5"><img src={workIcon} alt="" /> {office}</p>
-                                <p><img src={placeHolder} alt="" /> {location}</p>
+                                <p className="me-5 medium-text"><img src={workIcon} alt="" /> {office}</p>
+                                <p className="medium-text"><img src={placeHolder} alt="" /> {location}</p>
                             </div>
                             <button className="btn-regular visit-site2">Apply on Timesjobs</button>
                         </div>
                     }
 
-                    <p className="card-text">{sub}</p>
+                    <p className="card-text text-secondary">{sub}</p>
                     <div className="auth-container d-flex justify-content-between">
                         <div className="d-flex align-items-center">
                             <img className="me-2" src={authImg} alt="" />
-                            <h5>{author}</h5>
+                            <div>
+                                <h5 className="fw-bold">{author}</h5>
+                                <h6 className="views d-block d-sm-block d-md-none d-lg-none d-xl-none">{views} views</h6>
+                            </div>
                         </div>
                         <div className="d-flex align-items-center">
                             <div className="d-none d-sm-none d-md-block d-lg-block d-xl-block">
-                                <h6 className="me-2"><img src={eye} alt="" /> {views} views</h6>
+                                <h6 className="me-2 views"><img src={eye} alt="" /> {views} views</h6>
                             </div>
                             <img style={{ cursor: 'pointer', marginTop: '-10px' }} src={share} alt="" />
                         </div>

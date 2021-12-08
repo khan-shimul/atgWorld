@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import logo from '../../../images/logo.png';
 import { CreateAccount } from '../CreateAccount/CreateAccount';
 import './Header.css';
+import hIcon from '../../../images/icons/header1.png';
+import hIcon2 from '../../../images/icons/header2.png';
+import hIcon3 from '../../../images/icons/header3.png';
 
 const Header = () => {
     const [modalShow, setModalShow] = React.useState(false);
     return (
         <header>
-            <Navbar className="nav-menu" sticky="top" collapseOnSelect expand="lg">
+            <Navbar className="nav-menu d-none d-sm-none d-md-block d-lg-block d-xl-block" sticky="top" collapseOnSelect expand="lg">
                 <Container>
                     <Navbar.Brand as={NavLink} to='/'>
                         <img
@@ -44,6 +47,11 @@ const Header = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            <div className="container phone-header text-end d-block d-sm-block d-md-none d-lg-none d-xl-none py-2">
+                <img style={{ height: '15px', marginLeft: '15px' }} src={hIcon} alt="" />
+                <img style={{ height: '15px', marginLeft: '15px' }} src={hIcon2} alt="" />
+                <img style={{ height: '15px', marginLeft: '15px' }} src={hIcon3} alt="" />
+            </div>
         </header>
     );
 };

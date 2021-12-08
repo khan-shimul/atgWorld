@@ -24,3 +24,21 @@
 .visit-site2{
     color: #02B875;
 }
+
+.medium-text{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.views{
+    color: #495057;
+    margin-top: -5px;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    .other-info{
+        font-size: 10px;
+        font-weight: 600;
+    }
+}
