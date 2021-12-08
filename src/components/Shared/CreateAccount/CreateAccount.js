@@ -20,8 +20,9 @@ export const CreateAccount = (props) => {
             aria-labelledby="contained-modal-title-vcenter"
             centered
         >
-            <Modal.Header className="modal-header border-0" closeButton>
-                <p className="mt-2 mx-auto">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
+            <Modal.Header className="border-0 modal-header" closeButton>
+                <span className="mt-2 mx-auto">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</span>
+
             </Modal.Header>
             <Modal.Body className="my-2 ms-3 me-2">
                 {/* Form Section */}
