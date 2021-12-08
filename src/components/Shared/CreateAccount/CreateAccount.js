@@ -24,11 +24,11 @@ export const CreateAccount = (props) => {
             <Modal.Header className="modal-header border-0" closeButton>
                 <p className="mt-2 mx-auto">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
             </Modal.Header>
-            <Modal.Body className="my-2 ms-2">
+            <Modal.Body className="my-2 ms-3 me-2">
                 <h3 className="fw-bold text-dark">{isLogin ? 'Sign In' : 'Create Account'}</h3>
                 <div className="sing-up-container">
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-7">
                             <form onSubmit={handleSubmit(onSubmit)}>
                                 <div className="forms d-flex flex-column my-4">
                                     {!isLogin && <div className="names-field d-flex">
@@ -41,17 +41,19 @@ export const CreateAccount = (props) => {
                                         !isLogin && <input placeholder="Confirm Password" className="border p-2" type="password" {...register("password2", { required: true })} />
                                     }
                                 </div>
-                                <input className="submit-btn" type="submit" />
+                                <input className="submit-btn" type="submit" value={isLogin ? 'Sign In' : 'Create Account'} />
                             </form>
 
                             <div className="others-login">
                                 <button className="btn-social-login my-2"><span><img src={fb} className="img-fluid me-2" alt="" /></span> Sign Up with Facebook</button>
                                 <br />
                                 <button className="btn-social-login"><span><img className="img-fluid me-2" src={google} alt="" /></span> Sign Up with Google</button>
-
+                                {
+                                    isLogin && <p className="text-center fw-bold mt-3">Forgot Password?</p>
+                                }
                             </div>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-5">
                             <p className="text-end">
                                 {
                                     isLogin === false &&
@@ -60,7 +62,7 @@ export const CreateAccount = (props) => {
                                 }
                             </p>
                             {
-                                isLogin && <p className="text-end">Don’t have an account yet? <span className="sign-in-text" onClick={() => setLogin(false)}>Create new for free!</span></p>
+                                isLogin && <p className="text-end">Don’t have account? <span className="sign-in-text" onClick={() => setLogin(false)}>Create new for free!</span></p>
                             }
 
                             <img className="img-fluid p-3" src={loginImg} alt="" />
