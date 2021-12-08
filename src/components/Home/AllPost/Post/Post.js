@@ -5,7 +5,6 @@ import eye from '../../../../images/icons/eyes.png';
 import dateIcon from '../../../../images/icons/date.png';
 import workIcon from '../../../../images/icons/work.png';
 import placeHolder from '../../../../images/icons/placeHolder.png';
-import { Placeholder } from 'react-bootstrap';
 
 const Post = ({ post }) => {
     const { title, type, sub, img, author, authImg, views, date, location, office } = post;

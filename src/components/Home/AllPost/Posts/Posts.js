@@ -3,7 +3,6 @@ import { posts } from '../AllPost/AllPost';
 import Post from '../Post/Post';
 import './Post.css';
 import alertIcon from '../../../../images/icons/alert.png';
-import placeHolder from '../../../../images/icons/placeHolder.png';
 
 const Posts = () => {
     return (
