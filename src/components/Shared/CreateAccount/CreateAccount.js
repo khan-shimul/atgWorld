@@ -9,11 +9,10 @@ import Login from "./Login";
 
 export const CreateAccount = (props) => {
     const [isLogin, setLogin] = useState(false);
-    console.log(isLogin)
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+    const { register, handleSubmit } = useForm();
     const onSubmit = data => console.log(data);
 
-    // console.log(watch("example")); // watch input value by passing the name of it
     return (
         <Modal
             {...props}
@@ -25,6 +24,7 @@ export const CreateAccount = (props) => {
                 <p className="mt-2 mx-auto">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
             </Modal.Header>
             <Modal.Body className="my-2 ms-3 me-2">
+                {/* Form Section */}
                 <h3 className="fw-bold text-dark">{isLogin ? 'Sign In' : 'Create Account'}</h3>
                 <div className="sing-up-container">
                     <div className="row">
