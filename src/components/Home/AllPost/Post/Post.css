@@ -1,3 +1,9 @@
+.title{
+    color: #000;
+    font-size: 22px;
+    font-weight: 600;
+}
+
 .btn-dot{
     background: #BFC0C0;
 }
@@ -26,7 +32,7 @@
 }
 
 .medium-text{
-    font-weight: 600;
+    font-weight: 700;
     font-size: 15px;
 }
 
@@ -37,6 +43,13 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .title{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .auth-name{
+        font-size: 13px;
+    }
     .other-info{
         font-size: 10px;
         font-weight: 600;

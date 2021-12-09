@@ -21,7 +21,7 @@ const Post = ({ post }) => {
                 <div className="card-body">
                     <h6>{type}</h6>
                     <div className="d-flex justify-content-between align-items-center">
-                        <h5 className="card-title fw-bold">{title}</h5>
+                        <h5 className="title">{title}</h5>
                         <div className="dropdown">
                             <button
                                 onClick={() => setClicked(true)}
@@ -59,7 +59,7 @@ const Post = ({ post }) => {
                         <div className="d-flex align-items-center">
                             <img className="me-2" src={authImg} alt="" />
                             <div>
-                                <h5 className="fw-bold">{author}</h5>
+                                <h6 className="auth-name fw-bold">{author}</h6>
                                 <h6 className="views d-block d-sm-block d-md-none d-lg-none d-xl-none">{views} views</h6>
                             </div>
                         </div>
